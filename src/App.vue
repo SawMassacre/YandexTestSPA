@@ -1,5 +1,5 @@
 <template>
-  <fullscreen-block :color="'#3b71ee'">
+  <fullscreen-block :color="'#3b71ee'" id="block1">
     <p class="brutalism-underlined">Приветственная страница</p>
     <sparkle-pile :number="8"></sparkle-pile>
     <sparkle-pile :number="5" style="right: 0; top: 55%"></sparkle-pile>
@@ -66,7 +66,7 @@
       style="position: absolute; left: 84%; height: 20em; top: 66%"
     />
   </fullscreen-block>
-  <fullscreen-block :color="'#fc724c'" style="display: flex">
+  <fullscreen-block :color="'#fc724c'" style="display: flex" id="block2">
     <img
       src="./assets/dashed.svg"
       style="position: relative; width: 45vw; display: flex; margin: 0 auto"
@@ -75,43 +75,99 @@
     <sparkle-pile :number="8" style="right: 0; top: 100%"></sparkle-pile>
     <p class="brutalism-underlined">Страница с фотками</p>
   </fullscreen-block>
-  <fullscreen-block :color="'#fccb4c'"
+  <fullscreen-block :color="'#fccb4c'" id="block3"
     ><p class="brutalism-underlined">
-      История о том как я полюбил программирование
+      История о программировании
     </p></fullscreen-block
   >
-  <fullscreen-block :color="'#3b71ee'"
+  <fullscreen-block :color="'#3b71ee'" id="block4"
     ><p class="brutalism-underlined">Фишка в css</p></fullscreen-block
   >
-  <fullscreen-block :color="'#fc724c'"
+  <fullscreen-block :color="'#fc724c'" id="block5"
     ><p class="brutalism-underlined">
       Парадокс на JavaScript
     </p></fullscreen-block
   >
-  <fullscreen-block :color="'#fccb4c'"
+  <fullscreen-block :color="'#fccb4c'" id="block6"
     ><p class="brutalism-underlined">Мои контакты</p></fullscreen-block
   >
-  <fullscreen-block :color="'#3b71ee'"
+  <fullscreen-block :color="'#3b71ee'" id="block7"
     ><p class="brutalism-underlined">Задание 2 - Блок 1</p></fullscreen-block
   >
-  <fullscreen-block :color="'#fc724c'"
+  <fullscreen-block :color="'#fc724c'" id="block8"
     ><p class="brutalism-underlined">Задание 2 - Блок 2</p></fullscreen-block
   >
-  <fullscreen-block :color="'#fccb4c'"
+  <fullscreen-block :color="'#fccb4c'" id="block9"
     ><p class="brutalism-underlined">Задание 2 - Блок 3</p></fullscreen-block
   >
   <fullscreen-block
     class="brutalism-footer"
-    :color="'#282828'"
+    :color="'#363636'"
     style="color: white"
   >
-    <button v-on:click="moveToBlock('block1')">Приветственная страница</button>
-    <button v-on:click="moveToBlock('block2')">Страница с фотками</button>
-    <button v-on:click="moveToBlock('block3')">Фишка в css</button>
-    <button v-on:click="moveToBlock('block4')">Мои контакты</button>
-    <button v-on:click="moveToBlock('block5')">Задание 2 - Блок 1</button>
-    <button v-on:click="moveToBlock('block6')">Задание 2 - Блок 2</button>
-    <button v-on:click="moveToBlock('block7')">Задание 2 - Блок 3</button>
+    <div style="display: flex">
+      <ul class="footer-list" style="text-align: right">
+        <li>
+          <button v-on:click="moveToBlock('block1')">
+            Приветственная страница
+          </button>
+        </li>
+        <li>
+          <button v-on:click="moveToBlock('block2')">Страница с фотками</button>
+        </li>
+        <li>
+          <button v-on:click="moveToBlock('block3')">
+            История о программировании
+          </button>
+        </li>
+        <li>
+          <button v-on:click="moveToBlock('block4')">Фишка в css</button>
+        </li>
+      </ul>
+      <ul class="footer-list" style="padding-left: 2vw">
+        <li>
+          <button v-on:click="moveToBlock('block5')">
+            Парадокс на JavaScript
+          </button>
+        </li>
+        <li>
+          <button v-on:click="moveToBlock('block6')">Мои контакты</button>
+        </li>
+        <li>
+          <button v-on:click="moveToBlock('block7')">Задание 2 - Блок 1</button>
+        </li>
+        <li>
+          <button v-on:click="moveToBlock('block8')">Задание 2 - Блок 2</button>
+        </li>
+        <li>
+          <button v-on:click="moveToBlock('block9')">Задание 2 - Блок 3</button>
+        </li>
+      </ul>
+      <img
+        src="./assets/notation.svg"
+        style="
+          transform: scaleX(-1);
+          height: 28.5vh;
+          margin-left: 2vw;
+          fill: none;
+          stroke: #000000;
+          stroke-width: 10px;
+          stroke-dasharray: 2, 2;
+          stroke-linejoin: round;
+        "
+      />
+      <p
+        style="
+          margin-top: 12.5vh;
+          margin-left: 1vw;
+          font-weight: 600;
+          font-size: 1.5em;
+        "
+      >
+        Если хотите взглянуть ещё раз!
+      </p>
+    </div>
+    <p style="position: absolute; right: 0">(c) codemassacre 2023</p>
   </fullscreen-block>
 </template>
 
@@ -138,11 +194,8 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Space+Grotesk");
-
 body {
   font-weight: 400;
-  font-family: "Space Grotesk";
   color: #282828 !important;
   overflow-x: hidden;
 }
@@ -156,10 +209,12 @@ body {
   background-color: white;
   padding: 1em;
   border: 3px solid black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .brutalism-underlined {
-  font-family: "Space Grotesk";
   font-size: 1.5em;
   color: #282828 !important;
   font-weight: bold;
@@ -181,9 +236,39 @@ body {
 }
 
 .brutalism-footer {
-  height: 30vh;
+  height: 36vh;
   padding: 2em;
   font-size: 1.5em;
   font-family: monospace;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+}
+
+.footer-list button {
+  background-color: #ffffff;
+  border: none;
+  font-family: monospace;
+  color: #282828;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 3px solid black;
+}
+
+.footer-list button:hover {
+  background-color: #282828;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 </style>
