@@ -22,6 +22,7 @@
       </p>
     </div>
     <img
+      ref="myElement"
       src="./assets/git.webp"
       style="position: absolute; left: 0%; height: 20em; top: 0%"
     />
@@ -30,7 +31,7 @@
         class="brutalism-style"
         style="border-top-left-radius: 35px; border-bottom-right-radius: 35px"
       >
-        👋Привет, меня зовут Женя!
+        👋Привет меня зовут Женя!
       </div>
       <div class="brutalism-style">
         Это мой сайт в стиле
@@ -69,6 +70,7 @@
   </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" style="display: flex" id="block2">
     <img
+      class="animate__animated animate__bounce animate__infinite"
       src="./assets/dashed.svg"
       style="position: relative; width: 45vw; display: flex; margin: 0 auto"
     />
@@ -241,6 +243,7 @@
 <script>
 import FullscreenBlock from "./components/FullscreenBlock.vue";
 import SparklePile from "./components/SparklePile.vue";
+import "animate.css";
 
 export default {
   name: "App",
