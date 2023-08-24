@@ -14,6 +14,7 @@
         top: 25%;
         left: 4%;
         border-radius: 20px;
+        border-width: 2px;
       "
     >
       <p style="font-size: 0.3em; font-style: italic">
@@ -27,12 +28,20 @@
       style="position: absolute; left: 0%; height: 20em; top: 0%"
     />
     <div id="container-greeting">
-      <div class="brutalism-style">👋Привет меня зовут Женя!</div>
+      <div
+        class="brutalism-style"
+        style="border-top-left-radius: 35px; border-bottom-right-radius: 35px"
+      >
+        👋Привет меня зовут Женя!
+      </div>
       <div class="brutalism-style">
         Это мой сайт в стиле нео-брутализма!
         <p style="font-size: 0.5em; font-style: italic">Не судите строго :)</p>
       </div>
-      <div class="brutalism-style">
+      <div
+        class="brutalism-style"
+        style="border-bottom-left-radius: 35px; border-top-right-radius: 35px"
+      >
         Далее будут:
         <ul style="font-size: 0.5em">
           <li>&bull; Я в старших классах и в унике!</li>
@@ -42,6 +51,7 @@
             <p style="text-decoration: line-through">Надеюсь</p>
             &nbsp;крутая css фишка!
           </li>
+          <li>&bull; Парадокс на JS🐐🚪🏎️</li>
           <li>&bull; Мои контакты, ссылки на репозитории и тому подобное👾</li>
         </ul>
       </div>
