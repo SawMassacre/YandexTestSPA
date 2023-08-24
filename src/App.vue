@@ -1,5 +1,31 @@
 <template>
   <fullscreen-block :color="'#3b71ee'">
+    <img
+      src="./assets/memes.webp"
+      style="position: absolute; left: 84%; height: 20em; top: 66%"
+    />
+    <sparkle-pile :number="7"></sparkle-pile>
+    <div
+      class="brutalism-style"
+      style="
+        padding: 0.5em;
+        z-index: 10;
+        opacity: 0.7;
+        top: 25%;
+        left: 4%;
+        border-radius: 20px;
+      "
+    >
+      <p style="font-size: 0.3em; font-style: italic">
+        Звездочки генерируются рандомно,<br />
+        если они лежат некрасиво - <br />
+        перезагрузите страницу (пожалуйста)
+      </p>
+    </div>
+    <img
+      src="./assets/git.webp"
+      style="position: absolute; left: 0%; height: 20em; top: 0%"
+    />
     <div id="container-greeting">
       <div class="brutalism-style">👋Привет меня зовут Женя!</div>
       <div class="brutalism-style">
@@ -27,11 +53,13 @@
 
 <script>
 import FullscreenBlock from "./components/FullscreenBlock.vue";
+import SparklePile from "./components/SparklePile.vue";
 
 export default {
   name: "App",
   components: {
     FullscreenBlock,
+    SparklePile,
   },
 };
 </script>
@@ -43,6 +71,7 @@ body {
   font-weight: 400;
   font-family: "Space Grotesk";
   color: #282828 !important;
+  overflow-x: hidden;
 }
 
 .brutalism-style {
