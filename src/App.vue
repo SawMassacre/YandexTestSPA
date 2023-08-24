@@ -30,7 +30,7 @@
         class="brutalism-style"
         style="border-top-left-radius: 35px; border-bottom-right-radius: 35px"
       >
-        👋Привет меня зовут Женя!
+        👋Привет, меня зовут Женя!
       </div>
       <div class="brutalism-style">
         Это мой сайт в стиле
@@ -55,9 +55,10 @@
             <p style="color: #000000; background-color: #f7df1e; back">
               JavaScript
             </p>
-            &nbsp;и задание по теме 🐐🚪🏎️
+            &nbsp;и задание по теме🐐🚪🏎️
           </li>
           <li>&bull; Мои контакты, ссылки на репозитории и тому подобное👾</li>
+          <li>&bull; Задание 2💬</li>
         </ul>
       </div>
     </div>
@@ -76,10 +77,61 @@
     <p class="brutalism-underlined">Страница с фотками</p>
   </fullscreen-block>
   <fullscreen-block :color="'#fccb4c'" id="block3"
-    ><p class="brutalism-underlined">
-      История о программировании
-    </p></fullscreen-block
-  >
+    ><p class="brutalism-underlined">История о программировании</p>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      "
+    >
+      <div
+        style="
+          font-size: 0.5em;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 65%;
+        "
+      >
+        <div class="brutalism-style" style="margin: 0 auto">
+          В школе я хотел стать юристом, но когда пришла пора сдавать экзамены я
+          <br />
+          передумал и сел за математику с информатикой.
+        </div>
+        <div class="brutalism-style" style="margin: 0 auto">
+          В начале года я даже не знал как считать дискриминант!
+        </div>
+        <div class="brutalism-style" style="margin: 0 auto">
+          На курсах по подготовке мне посоветовали сдавать на плюсах🫡🫡🫡 <br />
+          но я на удивление хорошо справлялся...
+        </div>
+        <div class="brutalism-style" style="margin: 0 auto">
+          Поступил в ДВФУ, страдал с математикой, познал основы, начал проходить
+          стажировки и далее далее
+        </div>
+        <div class="brutalism-style" style="margin: 0 auto">
+          Но программирование я правда полюбил когда однажды понял - с ним ты
+          свободен:
+          <br />
+          Можно найти работу в любой стране🌍
+          <br />
+          Можно придумать что-то совершенно новое💡
+          <br />
+          Можно бесконечно расти и учиться📚
+          <br />
+          А еще - не передать словами насколько это круто работать в команде!👥
+          <p style="font-style: italic; font-size: 0.7em">
+            Иногда я задумываюсь что то, что я изучаю программирование, а не
+            что-то другое даёт мне надежду, <br />которой у меня бы не было при
+            любом другом раскладе
+          </p>
+        </div>
+      </div>
+    </div>
+  </fullscreen-block>
   <fullscreen-block :color="'#3b71ee'" id="block4"
     ><p class="brutalism-underlined">Фишка в css</p></fullscreen-block
   >
@@ -143,31 +195,46 @@
           <button v-on:click="moveToBlock('block9')">Задание 2 - Блок 3</button>
         </li>
       </ul>
-      <img
-        src="./assets/notation.svg"
+      <div
         style="
-          transform: scaleX(-1);
-          height: 28.5vh;
-          margin-left: 2vw;
-          fill: none;
-          stroke: #000000;
-          stroke-width: 10px;
-          stroke-dasharray: 2, 2;
-          stroke-linejoin: round;
-        "
-      />
-      <p
-        style="
-          margin-top: 12.5vh;
-          margin-left: 1vw;
-          font-weight: 600;
-          font-size: 1.5em;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
         "
       >
-        Если хотите взглянуть ещё раз!
-      </p>
+        <p
+          style="
+            font-size: 8em;
+            margin-bottom: 1.5vh;
+            transform: scaleX(-1);
+            -webkit-text-stroke: 3px black;
+          "
+        >
+          〱
+        </p>
+        <div
+          style="
+            height: fit-content;
+            width: fit-content;
+            padding-left: 0.6vw;
+            background-color: white;
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
+            border: 3px solid black;
+          "
+        >
+          <p style="font-size: 1.5em; padding: 0.3em; color: #000000">
+            Если хотите взглянуть ещё раз!
+          </p>
+        </div>
+        <img
+          src="./assets/devShocked.gif"
+          style="height: 25vh; padding-left: 2vw"
+        />
+      </div>
     </div>
-    <p style="position: absolute; right: 0">(c) codemassacre 2023</p>
+    <p style="position: absolute; right: 1em">codemassacre 2023</p>
   </fullscreen-block>
 </template>
 
@@ -227,16 +294,16 @@ body {
 
 #container-greeting {
   position: relative;
-  top: 30%;
+  top: 25%;
   left: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 55vh;
+  height: 60vh;
 }
 
 .brutalism-footer {
-  height: 36vh;
+  height: fit-content;
   padding: 2em;
   font-size: 1.5em;
   font-family: monospace;
