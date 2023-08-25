@@ -1,14 +1,29 @@
 <template>
-  <fullscreen-block :color="'#3b71ee'" id="block1">
+  <fullscreen-block :color="'#3b71ee'" id="block1" style="display: block">
     <p class="brutalism-underlined">Приветственная страница</p>
-    <sparkle-pile :number="8"></sparkle-pile>
+    <sparkle-pile :number="6"></sparkle-pile>
     <sparkle-pile :number="5" style="right: 0; top: 55%"></sparkle-pile>
-    <img
-      src="./assets/GreetingPhoto.png"
-      style="position: absolute; height: 140%"
-    />
     <div
-      class="brutalism-style animate__animated animate__bounceInLeft"
+      class="animate__animated animate__bounceInLeft animate__delay-0.5s"
+      style="
+        border: 3px solid black;
+        height: 95%;
+        border-radius: 65px 0;
+        box-shadow: 10px 10px 0px 0px black;
+        overflow: hidden;
+        position: absolute;
+        margin-top: 1%;
+        left: 30%;
+        width: fit-content;
+      "
+    >
+      <img
+        src="./assets/Me.jpg"
+        style="position: absolute; height: 100%; position: relative"
+      />
+    </div>
+    <div
+      class="brutalism-style animate__animated animate__bounceInLeft animate__delay-1s"
       style="
         padding: 0.5em;
         z-index: 10;
@@ -26,7 +41,7 @@
       </p>
     </div>
     <img
-      class="animate__animated animate__bounceIn"
+      class="animate__animated animate__bounceIn animate__delay-1s"
       ref="myElement"
       src="./assets/git.webp"
       style="position: absolute; left: 0%; height: 20em; top: 0%"
@@ -34,9 +49,18 @@
     <div id="container-greeting">
       <div
         class="brutalism-style"
-        style="border-top-left-radius: 35px; border-bottom-right-radius: 35px"
+        style="
+          border-top-left-radius: 35px;
+          border-bottom-right-radius: 35px;
+          display: flex;
+        "
       >
-        👋Привет меня зовут Женя!
+        <p
+          class="animate__animated animate__headShake animate__repeat-3 animate__delay-2s"
+        >
+          👋
+        </p>
+        Привет, меня зовут Женя!
       </div>
       <div class="brutalism-style">
         Это мой сайт в стиле
@@ -69,7 +93,7 @@
       </div>
     </div>
     <img
-      class="animate__animated animate__bounceIn"
+      class="animate__animated animate__bounceIn animate__delay-1s"
       src="./assets/memes.webp"
       style="position: absolute; left: 84%; height: 20em; top: 66%"
     />
@@ -87,6 +111,8 @@
   </fullscreen-block>
   <fullscreen-block :color="'#fccb4c'" id="block3"
     ><p class="brutalism-underlined">История о программировании</p>
+    <sparkle-pile :number="6"></sparkle-pile>
+    <sparkle-pile :number="6" style="right: 0; margin-top: 25%"></sparkle-pile>
     <div
       style="
         display: flex;
@@ -375,9 +401,5 @@ body {
   background-color: #282828;
   border-color: #ffffff;
   color: #ffffff;
-}
-
-.animate__bounceIn {
-  animation-delay: 0.5s;
 }
 </style>
