@@ -3,12 +3,16 @@
     <p class="brutalism-underlined">Приветственная страница</p>
     <sparkle-pile :number="8"></sparkle-pile>
     <sparkle-pile :number="5" style="right: 0; top: 55%"></sparkle-pile>
+    <img
+      src="./assets/GreetingPhoto.png"
+      style="position: absolute; height: 140%"
+    />
     <div
-      class="brutalism-style"
+      class="brutalism-style animate__animated animate__bounceInLeft"
       style="
         padding: 0.5em;
         z-index: 10;
-        opacity: 0.7;
+        opacity: 0.7 !important;
         top: 25%;
         left: 4%;
         border-radius: 20px;
@@ -22,6 +26,7 @@
       </p>
     </div>
     <img
+      class="animate__animated animate__bounceIn"
       ref="myElement"
       src="./assets/git.webp"
       style="position: absolute; left: 0%; height: 20em; top: 0%"
@@ -35,7 +40,7 @@
       </div>
       <div class="brutalism-style">
         Это мой сайт в стиле
-        <h style="font-weight: bold">нео-брутализм!</h>
+        <h style="font-weight: bold">необрутализм!</h>
         <p style="font-size: 0.5em; font-style: italic">Не судите строго :)</p>
       </div>
       <div
@@ -64,13 +69,15 @@
       </div>
     </div>
     <img
+      class="animate__animated animate__bounceIn"
       src="./assets/memes.webp"
       style="position: absolute; left: 84%; height: 20em; top: 66%"
     />
   </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" style="display: flex" id="block2">
     <img
-      class="animate__animated animate__bounce animate__infinite"
+      data-aos="zoom-out-down"
+      class="animate__animated animate__pulse animate__infinite"
       src="./assets/dashed.svg"
       style="position: relative; width: 45vw; display: flex; margin: 0 auto"
     />
@@ -98,23 +105,44 @@
           height: 65%;
         "
       >
-        <div class="brutalism-style" style="margin: 0 auto">
-          В школе я хотел стать юристом, но когда пришла пора сдавать экзамены я
+        <div
+          class="brutalism-style"
+          style="margin: 0 auto; width: 90%; border-radius: 20px 0px"
+          data-aos="zoom-out-down"
+        >
+          В школе я хотел стать юристом🎓, но когда пришла пора сдавать экзамены
+          я
           <br />
           передумал и сел за математику с информатикой.
         </div>
-        <div class="brutalism-style" style="margin: 0 auto">
+        <div
+          class="brutalism-style"
+          style="margin: 0 auto; width: 60%; border-radius: 10px"
+          data-aos="zoom-out-left"
+        >
           В начале года я даже не знал как считать дискриминант!
         </div>
-        <div class="brutalism-style" style="margin: 0 auto">
+        <div
+          class="brutalism-style"
+          style="margin: 0 auto; width: 90%; border-radius: 20px 0px"
+          data-aos="zoom-out-right"
+        >
           На курсах по подготовке мне посоветовали сдавать на плюсах🫡🫡🫡 <br />
           но я на удивление хорошо справлялся...
         </div>
-        <div class="brutalism-style" style="margin: 0 auto">
+        <div
+          class="brutalism-style"
+          style="margin: 0 auto; width: 60%; border-radius: 10px"
+          data-aos="zoom-out-left"
+        >
           Поступил в ДВФУ, страдал с математикой, познал основы, начал проходить
           стажировки и далее далее
         </div>
-        <div class="brutalism-style" style="margin: 0 auto">
+        <div
+          class="brutalism-style"
+          style="margin: 0 auto; width: 90%; border-radius: 20px 0px"
+          data-aos="zoom-out-up"
+        >
           Но программирование я правда полюбил когда однажды понял - с ним ты
           свободен:
           <br />
@@ -126,7 +154,7 @@
           <br />
           А еще - не передать словами насколько это круто работать в команде!👥
           <p style="font-style: italic; font-size: 0.7em">
-            Иногда я задумываюсь что то, что я изучаю программирование, а не
+            Иногда я задумываюсь именно то, что я изучаю программирование, а не
             что-то другое даёт мне надежду, <br />которой у меня бы не было при
             любом другом раскладе
           </p>
@@ -244,6 +272,13 @@
 import FullscreenBlock from "./components/FullscreenBlock.vue";
 import SparklePile from "./components/SparklePile.vue";
 import "animate.css";
+import "aos/dist/aos.css";
+import AOS from "aos";
+
+AOS.init({
+  delay: 300,
+  duration: 500,
+});
 
 export default {
   name: "App",
@@ -340,5 +375,9 @@ body {
   background-color: #282828;
   border-color: #ffffff;
   color: #ffffff;
+}
+
+.animate__bounceIn {
+  animation-delay: 0.5s;
 }
 </style>
