@@ -1,14 +1,25 @@
 <template>
-  <div
-    class="neobrutalism-message"
-    :class="[
-      direction === 'left' ? 'triangle left-top' : 'triangle right-bottom',
-    ]"
-  >
-    <div class="talktext">
-      <p style="color: #282828; font-size: 1.5em; padding: 1em">
-        <slot></slot>
-      </p>
+  <div class="container">
+    <div
+      class="neobrutalism-message"
+      :class="[
+        direction === 'left' ? 'triangle left-top' : 'triangle right-bottom',
+        direction === 'right'
+          ? ['right-justified', 'triangle left-top dark']
+          : '',
+      ]"
+      :style="direction === 'right' ? { backgroundColor: '#ffffff' } : {}"
+    >
+      <div class="talktext">
+        <p
+          :style="
+            direction === 'right' ? { color: '#363636' } : { color: '#ffffff' }
+          "
+          style="font-size: 1.5em; padding: 1em"
+        >
+          <slot></slot>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -29,12 +40,20 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 .neobrutalism-message {
-  margin: 40px;
-  display: inline-block;
+  width: fit-content;
+  max-width: 90%;
+  margin: 1.5vh;
+  display: flex;
+  flex-direction: row;
   position: relative;
   height: auto;
-  background-color: #ffffff;
+  background-color: #363636;
   font-family: monospace;
 }
 
@@ -48,10 +67,10 @@ export default {
   top: 0px;
   bottom: auto;
   border: 22px solid;
-  border-color: #ffffff transparent transparent transparent;
+  border-color: #363636 transparent transparent transparent;
 }
 
-.triangle.right-bottom::after {
+.triangle.right-bottom.dark::after {
   content: " ";
   position: absolute;
   width: 0;
@@ -62,5 +81,9 @@ export default {
   bottom: 0px;
   border: 22px solid;
   border-color: transparent transparent #ffffff transparent;
+}
+
+.right-justified {
+  margin-left: auto;
 }
 </style>

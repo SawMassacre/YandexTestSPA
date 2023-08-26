@@ -110,7 +110,7 @@
         overflow: hidden;
         position: absolute;
         margin-top: 15%;
-        left: 9%;
+        left: 12%;
         width: fit-content;
       "
     >
@@ -159,14 +159,12 @@
         position: absolute;
         height: fit-content;
         margin-top: 9%;
-        right: 17%;
+        right: 19%;
         border-radius: 20px;
         border-width: 2px;
       "
     >
-      <p style="font-size: 0.3em; font-style: italic">
-        Недавнее фото с дня рождения
-      </p>
+      <p style="font-size: 0.3em">Недавнее фото с дня рождения</p>
     </div>
     <div
       class="brutalism-style"
@@ -177,20 +175,18 @@
         position: absolute;
         height: fit-content;
         margin-top: 18%;
-        left: 17%;
+        left: 16%;
         border-radius: 20px;
         border-width: 2px;
       "
     >
-      <p style="font-size: 0.3em; font-style: italic">
-        Фото в середине лета перед университетом
-      </p>
+      <p style="font-size: 0.3em">Фото в середине лета перед университетом</p>
     </div>
     <img
       data-aos="zoom-out-down"
       class="animate__animated animate__pulse animate__infinite"
       src="./assets/dashed.svg"
-      style="position: relative; width: 45vw; display: flex; margin: 0 auto"
+      style="position: relative; width: 40vw; display: flex; margin: 0 auto"
     />
     <sparkle-pile :number="3" style="top: 150%"></sparkle-pile>
     <sparkle-pile :number="3" style="right: 0; top: 100%"></sparkle-pile>
@@ -335,29 +331,99 @@
     :color="'#363636'"
     style="color: white; padding: 1.5vh; display: flex; justify-content: center"
   >
-    <p style="font-variant: small-caps">
-      ⬇️ Отсюда начинается второе задание! ⬇️
+    <p data-aos="fade-in">
+      <strong>↓ Отсюда начинается второе задание ↓</strong>
     </p>
   </fullscreen-block>
   <fullscreen-block :color="'#3b71ee'" id="block7"
     ><p class="brutalism-underlined">Задание 2 - Блок 1</p>
-    <neobrutalism-message direction="right">
-      Этот курс совсем для новичков, он таким до конца и будет или мы будем
-      делать что-то поинтереснее?
-    </neobrutalism-message>
+    <sparkle-pile :number="10"></sparkle-pile>
+    <sparkle-pile :number="8" style="margin-top: 25%; right: 0"></sparkle-pile>
+    <div
+      class="message-container"
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        margin-left: 15%;
+        margin-right: 15%;
+      "
+    >
+      <neobrutalism-message direction="left" data-aos="zoom-in-right">
+        Этот курс совсем для новичков, он таким до конца и будет или мы будем
+        делать что-то поинтереснее?
+      </neobrutalism-message>
+      <neobrutalism-message direction="right" data-aos="zoom-in-left">
+        <strong>
+          Привет, я уверен далее в курсе найдется то, что будет для тебя в
+          новинку! Если ты опережаешь программу то могу порекомендовать материал
+          для изучения вне рамок курса. Например можешь ознакомиться с
+          typescript, на курсе его всё равно не будет, так что потом тебе не
+          будет скучно!
+        </strong>
+      </neobrutalism-message>
+      <neobrutalism-message direction="left" data-aos="zoom-in-right">
+        Я ничего не успеваю, успел только один урок посмотреть, а на практику
+        времени не хватает(((
+      </neobrutalism-message>
+      <neobrutalism-message direction="right" data-aos="zoom-in-left">
+        <strong>
+          Я понимаю насколько неприятно догонять, но нельзя сильно
+          расстраиваться. У тебя все еще есть время выполнить часть заданий, это
+          уже лучше чем сдаться. Сделай все что можешь и ты рано или поздно
+          догонишь! Если не можешь посмотреть уроки то прочти конспекты:
+          <a
+            href="https://www.youtube.com/watch?v=m6pE8psWJXE"
+            style="color: #fc724c"
+            >типассылка.com</a
+          >.
+        </strong>
+      </neobrutalism-message>
+      <neobrutalism-message direction="left" data-aos="zoom-in-right">
+        Я пропустила вебинар и теперь ничего вообще не понимаю, что происходит
+      </neobrutalism-message>
+      <neobrutalism-message direction="right" data-aos="zoom-in-left">
+        <strong>
+          Без паники, всё можно посмотреть в записи. Ставь на 1.5х и успеешь и
+          посмотреть и сделать! Если совсем не успеваешь то прочти материал в
+          pdf, ставь на 2х и решай фоном, лучше сделать что-то, чем ничего!
+          Запись тут:
+          <a
+            href="https://www.youtube.com/watch?v=m6pE8psWJXE"
+            style="color: #fc724c"
+            >типассылка.com</a
+          >, а пдфка лежит тут:
+          <a
+            href="https://www.youtube.com/watch?v=m6pE8psWJXE"
+            style="color: #fc724c"
+            >тожессылка.com.</a
+          >
+        </strong>
+      </neobrutalism-message>
+      <neobrutalism-message direction="left" data-aos="zoom-in-right">
+        Вот на этой странице на платформе /скрин/ 3я картинка ну вообще не к
+        месту( Да и вообще дизайн странноватый…
+      </neobrutalism-message>
+      <neobrutalism-message direction="right" data-aos="zoom-in-left">
+        <strong
+          >Ты можешь скачать аддон для браузера и накинуть свои стили на сайт,
+          как раз опробуешь знания на практике! А поводу картинки: она кажется
+          тебе отталкивающей/оскорбительной или просто не нравится с точки
+          зрения дизайна??
+        </strong>
+      </neobrutalism-message>
+    </div>
   </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" id="block8"
     ><p class="brutalism-underlined">Задание 2 - Блок 2</p></fullscreen-block
-  >
-  <fullscreen-block :color="'#fccb4c'" id="block9"
-    ><p class="brutalism-underlined">Задание 2 - Блок 3</p></fullscreen-block
   >
   <fullscreen-block
     class="brutalism-footer"
     :color="'#363636'"
     style="color: white"
   >
-    <div style="display: flex">
+    <div style="display: flex; align-items: center; height: 100%">
       <ul class="footer-list" style="text-align: right">
         <li>
           <button v-on:click="moveToBlock('block1')">
@@ -390,9 +456,6 @@
         </li>
         <li>
           <button v-on:click="moveToBlock('block8')">Задание 2 - Блок 2</button>
-        </li>
-        <li>
-          <button v-on:click="moveToBlock('block9')">Задание 2 - Блок 3</button>
         </li>
       </ul>
       <div
@@ -496,15 +559,6 @@ body {
 
 .neobrutalism-button:hover {
   background-color: #fccb4c;
-  color: #282828;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
   color: #282828;
 }
 
