@@ -100,6 +100,7 @@
   </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" style="display: flex" id="block2">
     <div
+      data-aos="zoom-in"
       style="
         transform: rotate(-7deg);
         border: 3px solid black;
@@ -130,6 +131,7 @@
       "
     />
     <div
+      data-aos="zoom-in"
       style="
         transform: rotate(6deg);
         border: 3px solid black;
@@ -204,6 +206,7 @@
         padding-left: 14vw;
         position: absolute;
         margin-top: 4vh;
+        z-index: 0;
       "
     />
     <sparkle-pile :number="6"></sparkle-pile>
@@ -264,8 +267,8 @@
           style="margin: 0 auto; width: 90%; border-radius: 20px 0px"
           data-aos="zoom-out-up"
         >
-          Но программирование я правда полюбил когда однажды понял - с ним ты
-          свободен:
+          Но программирование я правда <strong>полюбил</strong> когда однажды
+          понял - с ним ты свободен:
           <br />
           Можно найти работу в любой стране🌍
           <br />
@@ -273,7 +276,8 @@
           <br />
           Можно бесконечно расти и учиться📚
           <br />
-          А еще - не передать словами насколько это круто работать в команде!👥
+          А еще - не передать словами насколько это
+          <strong>круто</strong> работать в команде!👥
           <p style="font-style: italic; font-size: 0.7em">
             Даже не знаю что бы я делал если бы занимался чем то другим
           </p>
@@ -290,6 +294,8 @@
     </p></fullscreen-block
   >
   <fullscreen-block :color="'#fccb4c'" id="block6">
+    <sparkle-pile :number="6"></sparkle-pile>
+    <sparkle-pile :number="6" style="right: 0"></sparkle-pile>
     <p class="brutalism-underlined">Мои контакты</p>
 
     <div style="display: grid; place-items: center; height: 100%">
@@ -301,8 +307,24 @@
           <a href="https://github.com/SawMassacre">Github</a>
         </button>
         <button class="neobrutalism-button" data-aos="zoom-in">
-          <a href="https://github.com/SawMassacre/YandexTestSPA">Репозиторий</a>
+          <a href="https://github.com/SawMassacre/YandexTestSPA"
+            ><p style="font-size: 0.25em; font-style: italic">
+              (Ссылка на этот проект)
+            </p>
+            Репозиторий</a
+          >
         </button>
+        <div
+          data-aos="zoom-in"
+          style="
+            background-color: #282828;
+            border: 3px solid black;
+            box-shadow: 10px 10px 0px 0px black;
+            margin-top: 2vh;
+          "
+        >
+          <img src="./assets/devRush.gif" style="height: 25vh" />
+        </div>
       </div>
     </div>
   </fullscreen-block>
