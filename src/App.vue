@@ -105,7 +105,7 @@
         transform: rotate(-7deg);
         border: 3px solid black;
         height: 45%;
-        border-radius: 45px 0;
+        border-radius: 30px;
         box-shadow: 5px 5px 0px 0px black;
         overflow: hidden;
         position: absolute;
@@ -136,7 +136,7 @@
         transform: rotate(6deg);
         border: 3px solid black;
         height: 52%;
-        border-radius: 45px 0;
+        border-radius: 25px;
         box-shadow: 10px 10px 0px 0px black;
         overflow: hidden;
         position: absolute;
@@ -300,20 +300,22 @@
 
     <div style="display: grid; place-items: center; height: 100%">
       <div style="display: flex; flex-direction: column; align-items: center">
-        <button class="neobrutalism-button" data-aos="zoom-in">
-          <a href="https://t.me/sawmassacre">Telegram</a>
-        </button>
-        <button class="neobrutalism-button" data-aos="zoom-in">
-          <a href="https://github.com/SawMassacre">Github</a>
-        </button>
-        <button class="neobrutalism-button" data-aos="zoom-in">
-          <a href="https://github.com/SawMassacre/YandexTestSPA"
-            ><p style="font-size: 0.25em; font-style: italic">
+        <a href="https://t.me/sawmassacre">
+          <button class="neobrutalism-button" data-aos="zoom-in">
+            Telegram
+          </button>
+        </a>
+        <a href="https://github.com/SawMassacre">
+          <button class="neobrutalism-button" data-aos="zoom-in">Github</button>
+        </a>
+        <a href="https://github.com/SawMassacre/YandexTestSPA">
+          <button class="neobrutalism-button" data-aos="zoom-in">
+            Репозиторий
+            <p style="font-size: 0.25em; font-style: italic">
               (Ссылка на этот проект)
             </p>
-            Репозиторий</a
-          >
-        </button>
+          </button>
+        </a>
         <div
           data-aos="zoom-in"
           style="
@@ -328,9 +330,22 @@
       </div>
     </div>
   </fullscreen-block>
-  <fullscreen-block :color="'#3b71ee'" id="block7"
-    ><p class="brutalism-underlined">Задание 2 - Блок 1</p></fullscreen-block
+  <fullscreen-block
+    class="brutalism-footer"
+    :color="'#363636'"
+    style="color: white; padding: 1.5vh; display: flex; justify-content: center"
   >
+    <p style="font-variant: small-caps">
+      ⬇️ Отсюда начинается второе задание! ⬇️
+    </p>
+  </fullscreen-block>
+  <fullscreen-block :color="'#3b71ee'" id="block7"
+    ><p class="brutalism-underlined">Задание 2 - Блок 1</p>
+    <neobrutalism-message direction="right">
+      Этот курс совсем для новичков, он таким до конца и будет или мы будем
+      делать что-то поинтереснее?
+    </neobrutalism-message>
+  </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" id="block8"
     ><p class="brutalism-underlined">Задание 2 - Блок 2</p></fullscreen-block
   >
@@ -424,6 +439,7 @@
 </template>
 
 <script>
+import NeobrutalismMessage from "./components/NeobrutalismMessage.vue";
 import FullscreenBlock from "./components/FullscreenBlock.vue";
 import SparklePile from "./components/SparklePile.vue";
 import "animate.css";
@@ -440,6 +456,7 @@ export default {
   components: {
     FullscreenBlock,
     SparklePile,
+    NeobrutalismMessage,
   },
   methods: {
     moveToBlock(blockId) {
@@ -464,7 +481,7 @@ body {
   font-family: monospace;
   margin: 2vh;
   background-color: #282828;
-  color: #fccb4c;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   text-align: center;
