@@ -99,6 +99,91 @@
     />
   </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" style="display: flex" id="block2">
+    <div
+      style="
+        transform: rotate(-7deg);
+        border: 3px solid black;
+        height: 45%;
+        border-radius: 45px 0;
+        box-shadow: 5px 5px 0px 0px black;
+        overflow: hidden;
+        position: absolute;
+        margin-top: 15%;
+        left: 9%;
+        width: fit-content;
+      "
+    >
+      <img
+        src="./assets/MeSchool.jpg"
+        style="position: absolute; height: 100%; position: relative"
+      />
+    </div>
+    <img
+      data-aos="zoom-out-left"
+      src="./assets/plenty.webp"
+      style="
+        height: 30vh;
+        position: absolute;
+        margin-top: 52vh;
+        right: 7%;
+        z-index: 10;
+      "
+    />
+    <div
+      style="
+        transform: rotate(6deg);
+        border: 3px solid black;
+        height: 52%;
+        border-radius: 45px 0;
+        box-shadow: 10px 10px 0px 0px black;
+        overflow: hidden;
+        position: absolute;
+        margin-top: 8%;
+        right: 11%;
+        width: fit-content;
+      "
+    >
+      <img
+        src="./assets/MeUni.jpg"
+        style="position: absolute; height: 100%; position: relative"
+      />
+    </div>
+    <div
+      class="brutalism-style"
+      data-aos="zoom-out-left"
+      style="
+        padding: 0.5em;
+        z-index: 10;
+        position: absolute;
+        height: fit-content;
+        margin-top: 9%;
+        right: 17%;
+        border-radius: 20px;
+        border-width: 2px;
+      "
+    >
+      <p style="font-size: 0.3em; font-style: italic">
+        Недавнее фото с дня рождения
+      </p>
+    </div>
+    <div
+      class="brutalism-style"
+      data-aos="zoom-out-right"
+      style="
+        padding: 0.5em;
+        z-index: 10;
+        position: absolute;
+        height: fit-content;
+        margin-top: 18%;
+        left: 17%;
+        border-radius: 20px;
+        border-width: 2px;
+      "
+    >
+      <p style="font-size: 0.3em; font-style: italic">
+        Фото в середине лета перед университетом
+      </p>
+    </div>
     <img
       data-aos="zoom-out-down"
       class="animate__animated animate__pulse animate__infinite"
@@ -106,11 +191,21 @@
       style="position: relative; width: 45vw; display: flex; margin: 0 auto"
     />
     <sparkle-pile :number="3" style="top: 150%"></sparkle-pile>
-    <sparkle-pile :number="8" style="right: 0; top: 100%"></sparkle-pile>
+    <sparkle-pile :number="3" style="right: 0; top: 100%"></sparkle-pile>
     <p class="brutalism-underlined">Страница с фотками</p>
   </fullscreen-block>
   <fullscreen-block :color="'#fccb4c'" id="block3"
     ><p class="brutalism-underlined">История о программировании</p>
+    <img
+      data-aos="zoom-out-right"
+      src="./assets/way.webp"
+      style="
+        height: 35vh;
+        padding-left: 14vw;
+        position: absolute;
+        margin-top: 4vh;
+      "
+    />
     <sparkle-pile :number="6"></sparkle-pile>
     <sparkle-pile :number="6" style="right: 0; margin-top: 25%"></sparkle-pile>
     <div
@@ -128,7 +223,7 @@
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
-          height: 65%;
+          height: 70%;
         "
       >
         <div
@@ -180,9 +275,7 @@
           <br />
           А еще - не передать словами насколько это круто работать в команде!👥
           <p style="font-style: italic; font-size: 0.7em">
-            Иногда я задумываюсь именно то, что я изучаю программирование, а не
-            что-то другое даёт мне надежду, <br />которой у меня бы не было при
-            любом другом раскладе
+            Даже не знаю что бы я делал если бы занимался чем то другим
           </p>
         </div>
       </div>
@@ -196,9 +289,23 @@
       Парадокс на JavaScript
     </p></fullscreen-block
   >
-  <fullscreen-block :color="'#fccb4c'" id="block6"
-    ><p class="brutalism-underlined">Мои контакты</p></fullscreen-block
-  >
+  <fullscreen-block :color="'#fccb4c'" id="block6">
+    <p class="brutalism-underlined">Мои контакты</p>
+
+    <div style="display: grid; place-items: center; height: 100%">
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <button class="neobrutalism-button" data-aos="zoom-in">
+          <a href="https://t.me/sawmassacre">Telegram</a>
+        </button>
+        <button class="neobrutalism-button" data-aos="zoom-in">
+          <a href="https://github.com/SawMassacre">Github</a>
+        </button>
+        <button class="neobrutalism-button" data-aos="zoom-in">
+          <a href="https://github.com/SawMassacre/YandexTestSPA">Репозиторий</a>
+        </button>
+      </div>
+    </div>
+  </fullscreen-block>
   <fullscreen-block :color="'#3b71ee'" id="block7"
     ><p class="brutalism-underlined">Задание 2 - Блок 1</p></fullscreen-block
   >
@@ -290,7 +397,7 @@
         />
       </div>
     </div>
-    <p style="position: absolute; right: 1em">codemassacre 2023</p>
+    <p style="position: absolute; right: 1em">𝗰𝗼𝗱𝗲𝗺𝗮𝘀𝘀𝗮𝗰𝗿𝗲 𝟮𝟬𝟮𝟯</p>
   </fullscreen-block>
 </template>
 
@@ -329,6 +436,37 @@ body {
   font-weight: 400;
   color: #282828 !important;
   overflow-x: hidden;
+}
+
+.neobrutalism-button {
+  font-family: monospace;
+  margin: 2vh;
+  background-color: #282828;
+  color: #fccb4c;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  height: fit-content;
+  display: inline-block;
+  border: 3px solid black;
+  font-size: 5em;
+  box-shadow: 10px 10px 0px 0px black;
+  cursor: pointer;
+}
+
+.neobrutalism-button:hover {
+  background-color: #fccb4c;
+  color: #282828;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #282828;
 }
 
 .brutalism-style {
