@@ -286,8 +286,22 @@
   >
   <fullscreen-block :color="'#fc724c'" id="block5"
     ><p class="brutalism-underlined">Парадокс на JavaScript</p>
-    <monty-hall></monty-hall
-  ></fullscreen-block>
+    <story-about-three-j-s></story-about-three-j-s>
+  </fullscreen-block>
+  <iframe
+    ref="iframe"
+    src="https://0x.se/"
+    width="100%"
+    height="550px"
+    scrolling="yes"
+  ></iframe>
+  <iframe
+    ref="iframe"
+    src="https://jesse-zhou.com/"
+    width="100%"
+    height="550px"
+    scrolling="yes"
+  ></iframe>
   <fullscreen-block :color="'#fccb4c'" id="block6">
     <sparkle-pile :number="6"></sparkle-pile>
     <sparkle-pile :number="6" style="right: 0"></sparkle-pile>
@@ -658,7 +672,7 @@ import NeobrutalismMessage from "./components/NeobrutalismMessage.vue";
 import FullscreenBlock from "./components/FullscreenBlock.vue";
 import NeobrutalismIdea from "./components/NeobrutalismIdea.vue";
 import SparklePile from "./components/SparklePile.vue";
-import MontyHall from "./components/MontyHall.vue";
+import StoryAboutThreeJS from "./components/StoryAboutThreeJS.vue";
 import "animate.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -674,8 +688,8 @@ export default {
     FullscreenBlock,
     SparklePile,
     NeobrutalismMessage,
+    StoryAboutThreeJS,
     NeobrutalismIdea,
-    MontyHall,
   },
   methods: {
     moveToBlock(blockId) {
@@ -694,6 +708,7 @@ body {
   font-weight: 400;
   color: #282828 !important;
   overflow-x: hidden;
+  background-color: #fccb4c;
 }
 
 .neobrutalism-button {
