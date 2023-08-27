@@ -99,6 +99,8 @@
     />
   </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" style="display: flex" id="block2">
+    <sparkle-pile :number="7" style="top: 150%"></sparkle-pile>
+    <sparkle-pile :number="3" style="right: 0; top: 100%"></sparkle-pile>
     <div
       data-aos="zoom-in"
       style="
@@ -188,12 +190,12 @@
       src="./assets/dashed.svg"
       style="position: relative; width: 40vw; display: flex; margin: 0 auto"
     />
-    <sparkle-pile :number="3" style="top: 150%"></sparkle-pile>
-    <sparkle-pile :number="3" style="right: 0; top: 100%"></sparkle-pile>
     <p class="brutalism-underlined">Страница с фотками</p>
   </fullscreen-block>
   <fullscreen-block :color="'#fccb4c'" id="block3"
     ><p class="brutalism-underlined">История о программировании</p>
+    <sparkle-pile :number="6"></sparkle-pile>
+    <sparkle-pile :number="6" style="right: 0; margin-top: 25%"></sparkle-pile>
     <img
       data-aos="zoom-out-right"
       src="./assets/way.webp"
@@ -205,8 +207,6 @@
         z-index: 0;
       "
     />
-    <sparkle-pile :number="6"></sparkle-pile>
-    <sparkle-pile :number="6" style="right: 0; margin-top: 25%"></sparkle-pile>
     <div
       style="
         display: flex;
@@ -285,10 +285,9 @@
     ><p class="brutalism-underlined">Фишка в css</p></fullscreen-block
   >
   <fullscreen-block :color="'#fc724c'" id="block5"
-    ><p class="brutalism-underlined">
-      Парадокс на JavaScript
-    </p></fullscreen-block
-  >
+    ><p class="brutalism-underlined">Парадокс на JavaScript</p>
+    <monty-hall></monty-hall
+  ></fullscreen-block>
   <fullscreen-block :color="'#fccb4c'" id="block6">
     <sparkle-pile :number="6"></sparkle-pile>
     <sparkle-pile :number="6" style="right: 0"></sparkle-pile>
@@ -339,6 +338,19 @@
     ><p class="brutalism-underlined">Задание 2 - Блок 1</p>
     <sparkle-pile :number="10"></sparkle-pile>
     <sparkle-pile :number="8" style="margin-top: 25%; right: 0"></sparkle-pile>
+    <img
+      ref="myElement"
+      data-aos="zoom-out-right"
+      src="./assets/emo.webp"
+      style="
+        left: 0%;
+        height: 17em;
+        margin-top: 7vh;
+        transform: rotate(-15deg);
+        margin-left: 1.5vw;
+        position: absolute;
+      "
+    />
     <div
       class="message-container"
       style="
@@ -351,7 +363,7 @@
       "
     >
       <neobrutalism-message direction="left" data-aos="zoom-in-right">
-        Этот курс совсем для новичков, он таким до конца и будет или мы будем
+        🥱 Этот курс совсем для новичков, он таким до конца и будет или мы будем
         делать что-то поинтереснее?
       </neobrutalism-message>
       <neobrutalism-message direction="right" data-aos="zoom-in-left">
@@ -364,7 +376,7 @@
         </strong>
       </neobrutalism-message>
       <neobrutalism-message direction="left" data-aos="zoom-in-right">
-        Я ничего не успеваю, успел только один урок посмотреть, а на практику
+        😟 Я ничего не успеваю, успел только один урок посмотреть, а на практику
         времени не хватает(((
       </neobrutalism-message>
       <neobrutalism-message direction="right" data-aos="zoom-in-left">
@@ -372,16 +384,17 @@
           Я понимаю насколько неприятно догонять, но нельзя сильно
           расстраиваться. У тебя все еще есть время выполнить часть заданий, это
           уже лучше чем сдаться. Сделай все что можешь и ты рано или поздно
-          догонишь! Если не можешь посмотреть уроки то прочти конспекты:
+          догонишь! Если совсем не можешь посмотреть уроки, то прочти конспекты:
           <a
             href="https://www.youtube.com/watch?v=m6pE8psWJXE"
             style="color: #fc724c"
-            >типассылка.com</a
+            >вродессылка.com</a
           >.
         </strong>
       </neobrutalism-message>
       <neobrutalism-message direction="left" data-aos="zoom-in-right">
-        Я пропустила вебинар и теперь ничего вообще не понимаю, что происходит
+        😵‍💫 Я пропустила вебинар и теперь ничего вообще не понимаю, что
+        происходит
       </neobrutalism-message>
       <neobrutalism-message direction="right" data-aos="zoom-in-left">
         <strong>
@@ -402,7 +415,7 @@
         </strong>
       </neobrutalism-message>
       <neobrutalism-message direction="left" data-aos="zoom-in-right">
-        Вот на этой странице на платформе /скрин/ 3я картинка ну вообще не к
+        🙄 Вот на этой странице на платформе /скрин/ 3я картинка ну вообще не к
         месту( Да и вообще дизайн странноватый…
       </neobrutalism-message>
       <neobrutalism-message direction="right" data-aos="zoom-in-left">
@@ -416,14 +429,150 @@
     </div>
   </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" id="block8"
-    ><p class="brutalism-underlined">Задание 2 - Блок 2</p></fullscreen-block
-  >
+    ><p class="brutalism-underlined">Задание 2 - Блок 2</p>
+    <sparkle-pile :number="10"></sparkle-pile>
+    <sparkle-pile :number="8" style="margin-top: 25%; right: 0"></sparkle-pile>
+    <img
+      ref="myElement"
+      data-aos="zoom-out-left"
+      src="./assets/agile.webp"
+      style="
+        right: 0%;
+        height: 20em;
+        margin-top: 7vh;
+        margin-right: 4vw;
+        position: absolute;
+      "
+    />
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+      "
+    >
+      <neobrutalism-idea style="width: 60%">
+        <template v-slot:title>
+          <h2>Идеи для пет-проектов</h2>
+        </template>
+
+        <template v-slot:description>
+          <p>
+            Можно предложить обсудить какой личный проект хотели бы сделать
+            ребята. Предложить набор тем, затем обсудить реализацию, привести
+            примеры из личного опыта.
+          </p>
+        </template>
+
+        <template v-slot:pros>
+          <li>
+            &bull; Может вызвать бурное обсуждение если у кого-то совпадут идеи.
+          </li>
+          <li>&bull; Может возникнуть кооперация между учениками.</li>
+          <li>&bull; Может замотивировать развиваться вне рамок курса.</li>
+        </template>
+      </neobrutalism-idea>
+      <neobrutalism-idea style="width: 60%">
+        <template v-slot:title>
+          <h2>Обсудить недавно просмотренное/любимое</h2>
+        </template>
+
+        <template v-slot:description>
+          <p>
+            Можно обсудить любимые фильмы , сериалы, книги, музыку, приложения,
+            сайты и так далее.
+          </p>
+        </template>
+
+        <template v-slot:pros>
+          <li>&bull; Точно вызывает обсуждение.</li>
+          <li>
+            &bull; Дает почувствовать связь с курсом не только в учебном плане.
+          </li>
+          <li>&bull; Привлекает внимание к чату.</li>
+          <li>
+            &bull; Участвовать в обсуждении могут все, а не только прошаренные в
+            программировании (как в других идеях).
+          </li>
+        </template>
+      </neobrutalism-idea>
+      <neobrutalism-idea style="width: 60%">
+        <template v-slot:title>
+          <h2>
+            Можно скидывать недавно просмотренные видео по популярному
+            программированию/новым технологиям
+          </h2>
+        </template>
+
+        <template v-slot:description>
+          <p>
+            Допустим вышла новая библиотека и ее быстрый обзор. Можно скинуть
+            ссылку в чат и обсудить, объяснить в чем крутость или наоборот
+            недостатки.
+          </p>
+        </template>
+
+        <template v-slot:pros>
+          <li>&bull; Дополняет знания курса.</li>
+          <li>
+            &bull; Дает материал для изучения тем, кто идет быстрее (см. Блок -
+            1).
+          </li>
+          <li>&bull; Показывает обширность изучаемой темы.</li>
+        </template>
+      </neobrutalism-idea>
+    </div>
+  </fullscreen-block>
+  <fullscreen-block :color="'#fccb4c'" id="block9">
+    <p class="brutalism-underlined">Задание 2 - Блок 3</p>
+    <sparkle-pile :number="10" style="margin-top: 25%; left: 0"></sparkle-pile>
+    <sparkle-pile :number="8" style="right: 0"></sparkle-pile>
+    <div style="display: flex; flex-direction: row; padding: 25vh">
+      <div
+        data-aos="fade-right"
+        style="
+          background-color: #282828;
+          border: 3px solid black;
+          box-shadow: 10px 10px 0px 0px black;
+          width: fit-content;
+        "
+      >
+        <img src="./assets/devDeadline.gif" />
+      </div>
+      <div
+        data-aos="fade-left"
+        style="
+          margin-left: 2vw;
+          background-color: #282828;
+          border: 3px solid black;
+          font-family: monospace;
+          padding: 3vh;
+          font-size: 2em;
+          color: #ffffff;
+          box-shadow: 10px 10px 0px 0px black;
+          width: fit-content;
+        "
+      >
+        <span style="color: #fc724c">@all</span> Ребята, напоминаю что срок
+        сдачи практического задания истекает сегодня! В этот раз сдало маловато
+        людей - у кого проблемы пишите мне в ЛС. Если задание кажется вам
+        слишком сложным то пожалуйста напишите с чем возникают сложности,
+        главное не молчите. Я думаю вы не отвечаете потому, что боитесь спросить
+        - так делать не надо. Вы тут чтобы спрашивать!!! <br /><br />
+        И еще вот что: сдавать задания это не всегда о знаниях, иногда надо
+        сдать даже не до конца сделанную работу, главное сдайте. Дисциплина так
+        же важна как и знания!
+      </div>
+    </div>
+  </fullscreen-block>
   <fullscreen-block
     class="brutalism-footer"
     :color="'#363636'"
     style="color: white"
   >
-    <div style="display: flex; align-items: center; height: 100%">
+    <div style="display: flex; height: 100%">
       <ul class="footer-list" style="text-align: right">
         <li>
           <button v-on:click="moveToBlock('block1')">
@@ -456,6 +605,9 @@
         </li>
         <li>
           <button v-on:click="moveToBlock('block8')">Задание 2 - Блок 2</button>
+        </li>
+        <li>
+          <button v-on:click="moveToBlock('block9')">Задание 2 - Блок 3</button>
         </li>
       </ul>
       <div
@@ -504,7 +656,9 @@
 <script>
 import NeobrutalismMessage from "./components/NeobrutalismMessage.vue";
 import FullscreenBlock from "./components/FullscreenBlock.vue";
+import NeobrutalismIdea from "./components/NeobrutalismIdea.vue";
 import SparklePile from "./components/SparklePile.vue";
+import MontyHall from "./components/MontyHall.vue";
 import "animate.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -520,6 +674,8 @@ export default {
     FullscreenBlock,
     SparklePile,
     NeobrutalismMessage,
+    NeobrutalismIdea,
+    MontyHall,
   },
   methods: {
     moveToBlock(blockId) {
@@ -543,7 +699,7 @@ body {
 .neobrutalism-button {
   font-family: monospace;
   margin: 2vh;
-  background-color: #282828;
+  background-color: #363636;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
