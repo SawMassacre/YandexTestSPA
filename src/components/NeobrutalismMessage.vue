@@ -15,7 +15,7 @@
           :style="
             direction === 'right' ? { color: '#363636' } : { color: '#ffffff' }
           "
-          style="font-size: 1rem; padding: 2vh"
+          style="font-size: 0.75rem; padding: 2vh"
         >
           <slot></slot>
         </p>

@@ -6,7 +6,7 @@
     <div
       class="animate__animated animate__bounceInLeft animate__delay-0.5s"
       style="
-        border: 3px solid black;
+        border: 0.15rem solid black;
         height: 95%;
         border-radius: 65px 0;
         box-shadow: 10px 10px 0px 0px black;
@@ -105,7 +105,7 @@
       data-aos="zoom-in"
       style="
         transform: rotate(-7deg);
-        border: 3px solid black;
+        border: 0.15rem solid black;
         height: 45%;
         border-radius: 30px;
         box-shadow: 5px 5px 0px 0px black;
@@ -136,7 +136,7 @@
       data-aos="zoom-in"
       style="
         transform: rotate(6deg);
-        border: 3px solid black;
+        border: 0.15rem solid black;
         height: 52%;
         border-radius: 25px;
         box-shadow: 10px 10px 0px 0px black;
@@ -217,12 +217,12 @@
     >
       <div
         style="
-          font-size: 0.5em;
           text-align: center;
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
           height: 70%;
+          font-size: 0.9rem;
         "
       >
         <div
@@ -328,13 +328,13 @@
         <div
           data-aos="zoom-in"
           style="
-            background-color: #282828;
-            border: 3px solid black;
+            background-color: #363636;
+            border: 0.15rem solid black;
             box-shadow: 10px 10px 0px 0px black;
             margin-top: 2vh;
           "
         >
-          <img src="./assets/devRush.gif" style="height: 25vh" />
+          <img src="./assets/devRush.gif" style="height: 13rem" />
         </div>
       </div>
     </div>
@@ -342,7 +342,13 @@
   <fullscreen-block
     class="brutalism-footer"
     :color="'#363636'"
-    style="color: white; padding: 1.5vh; display: flex; justify-content: center"
+    style="
+      color: white;
+      padding: 1.5vh;
+      display: flex;
+      justify-content: center;
+      font-size: 1rem;
+    "
   >
     <p data-aos="fade-in">
       <strong>↓ Отсюда начинается второе задание ↓</strong>
@@ -358,7 +364,7 @@
       src="./assets/emo.webp"
       style="
         left: 0%;
-        height: 17em;
+        height: 13em;
         margin-top: 7vh;
         transform: rotate(-15deg);
         margin-left: 1.5vw;
@@ -452,7 +458,7 @@
       src="./assets/agile.webp"
       style="
         right: 0%;
-        height: 20em;
+        height: 15em;
         margin-top: 7vh;
         margin-right: 4vw;
         position: absolute;
@@ -543,30 +549,48 @@
     <p class="brutalism-underlined">Задание 2 - Блок 3</p>
     <sparkle-pile :number="10" style="margin-top: 25%; left: 0"></sparkle-pile>
     <sparkle-pile :number="8" style="right: 0"></sparkle-pile>
-    <div style="display: flex; flex-direction: row; padding: 25vh">
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      "
+    >
       <div
         data-aos="fade-right"
         style="
-          background-color: #282828;
-          border: 3px solid black;
+          background-color: #363636;
+          border: 0.15rem solid black;
           box-shadow: 10px 10px 0px 0px black;
-          width: fit-content;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 13rem;
+          height: 13rem;
         "
       >
-        <img src="./assets/devDeadline.gif" />
+        <div style="height: 100%; width: 100%">
+          <img
+            src="./assets/devDeadline.gif"
+            style="width: 100%; object-fit: contain"
+          />
+        </div>
       </div>
       <div
         data-aos="fade-left"
         style="
-          margin-left: 2vw;
-          background-color: #282828;
-          border: 3px solid black;
+          background-color: #363636;
+          border: 0.15rem solid black;
           font-family: monospace;
-          padding: 3vh;
-          font-size: 2em;
+          padding: 1.5rem;
+          font-size: 1rem;
+          height: 13rem;
+          width: 55rem;
+          margin-left: 1.5rem;
           color: #ffffff;
           box-shadow: 10px 10px 0px 0px black;
-          width: fit-content;
         "
       >
         <span style="color: #fc724c">@all</span> Ребята, напоминаю что срок
@@ -634,7 +658,7 @@
       >
         <p
           style="
-            font-size: 8em;
+            font-size: 7.5rem;
             margin-bottom: 1.5vh;
             transform: scaleX(-1);
             -webkit-text-stroke: 3px black;
@@ -650,16 +674,16 @@
             background-color: white;
             border-bottom-left-radius: 15px;
             border-top-left-radius: 15px;
-            border: 3px solid black;
+            border: 0.15rem solid black;
           "
         >
-          <p style="font-size: 1.5em; padding: 0.3em; color: #000000">
+          <p style="font-size: 1.25rem; padding: 0.3em; color: #000000">
             Если хотите взглянуть ещё раз!
           </p>
         </div>
         <img
           src="./assets/devShocked.gif"
-          style="height: 25vh; padding-left: 2vw"
+          style="height: 12em; padding-left: 2vw"
         />
       </div>
     </div>
@@ -706,7 +730,7 @@ export default {
 <style>
 body {
   font-weight: 400;
-  color: #282828 !important;
+  color: #363636 !important;
   overflow-x: hidden;
   background-color: #fccb4c;
 }
@@ -722,26 +746,25 @@ body {
   text-decoration: none;
   height: fit-content;
   display: inline-block;
-  border: 3px solid black;
-  font-size: 5em;
+  border: 0.15rem solid black;
+  font-size: 3rem;
   box-shadow: 10px 10px 0px 0px black;
   cursor: pointer;
 }
 
 .neobrutalism-button:hover {
   background-color: #fccb4c;
-  color: #282828;
+  color: #363636;
 }
 
 .brutalism-style {
   position: relative;
   width: fit-content;
   font-family: monospace;
-  font-size: 1.7rem;
   color: black;
   background-color: white;
   padding: 1em;
-  border: 3px solid black;
+  border: 0.15rem solid black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -749,7 +772,7 @@ body {
 
 .brutalism-underlined {
   font-size: 1.5em;
-  color: #282828 !important;
+  color: #363636 !important;
   font-weight: bold;
   font-family: monospace;
   text-decoration: underline;
@@ -762,6 +785,7 @@ body {
   position: relative;
   top: 25%;
   left: 50%;
+  font-size: 1.7rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -788,19 +812,19 @@ body {
   background-color: #ffffff;
   border: none;
   font-family: monospace;
-  color: #282828;
+  color: #363636;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.755rem;
   border-radius: 10px;
   cursor: pointer;
-  border: 3px solid black;
+  border: 0.15rem solid black;
 }
 
 .footer-list button:hover {
-  background-color: #282828;
+  background-color: #363636;
   border-color: #ffffff;
   color: #ffffff;
 }
