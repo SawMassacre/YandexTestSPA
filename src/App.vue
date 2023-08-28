@@ -929,9 +929,6 @@ export default {
       isLoading: true,
     };
   },
-  mounted() {
-    this.isLoading = false;
-  },
 };
 </script>
 
