@@ -305,7 +305,16 @@
     height="550px"
     scrolling="yes"
   ></iframe>
-  <fullscreen-block :color="'#fccb4c'" id="block6">
+  <fullscreen-block
+    :color="'#fccb4c'"
+    id="block6"
+    style="
+      opacity: 1;
+      background-image: linear-gradient(#363636 1px, transparent 1px),
+        linear-gradient(to right, #363636 1px, #fccb4c 1px);
+      background-size: 20px 20px;
+    "
+  >
     <sparkle-pile :number="6"></sparkle-pile>
     <sparkle-pile :number="6" style="right: 0"></sparkle-pile>
     <p class="brutalism-underlined">Мои контакты</p>
@@ -555,7 +564,17 @@
       </neobrutalism-idea>
     </div>
   </fullscreen-block>
-  <fullscreen-block :color="'#fccb4c'" id="block9">
+  <fullscreen-block
+    :color="'#fccb4c'"
+    id="block9"
+    style="
+      opacity: 1;
+      background-image: radial-gradient(#363636 1px, transparent 1px),
+        radial-gradient(#363636 1px, #fccb4c 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    "
+  >
     <p class="brutalism-underlined">Задание 2 - Блок 3</p>
     <sparkle-pile :number="10" style="margin-top: 25%; left: 0"></sparkle-pile>
     <sparkle-pile :number="8" style="right: 0"></sparkle-pile>
@@ -740,7 +759,7 @@ body {
   font-weight: 400;
   color: #363636 !important;
   overflow-x: hidden;
-  background-color: #fccb4c;
+  background-color: #363636;
 }
 
 .neobrutalism-button {
