@@ -339,9 +339,9 @@
               margin: 0 auto;
               width: fit-content;
               border-radius: 10px;
-              border-style: ridge;
-              border-width: 7px;
-              border-color: #363636;
+              border-style: dashed;
+              border-width: 5px;
+              border-color: #fc724c;
               width: 45rem;
               margin-bottom: 1rem;
             "
@@ -365,14 +365,14 @@
           <div
             data-aos="zoom-in"
             style="
-          border-style: ridge;
-          border-width: 7px;
-          border
-          border-color: #363636;
-          width: 45rem;
-          border-radius: 10px;
-          overflow: hidden;
-        "
+              border-style: dashed;
+              border-width: 5px;
+              border-style: dashed;
+              border-color: #363636;
+              width: 45rem;
+              border-radius: 10px;
+              overflow: hidden;
+            "
           >
             <img
               src="./assets/demo.jpg"
@@ -398,9 +398,9 @@
               margin: 0 auto;
               width: fit-content;
               border-radius: 10px;
-              border-style: ridge;
-              border-width: 7px;
-              border-color: #363636;
+              border-style: dashed;
+              border-width: 5px;
+              border-color: #fc724c;
               width: 45rem;
               margin-top: 1rem;
             "
@@ -914,13 +914,13 @@ export default {
   },
   data() {
     return {
-      isLoading: true,
+      isLoaded: true,
     };
   },
   methods: {
     onImgLoad() {
       setTimeout(() => {
-        this.isLoading = false;
+        this.isLoaded = false;
       }, 1500);
     },
     moveToBlock(blockId) {
