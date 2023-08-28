@@ -98,7 +98,18 @@
       style="position: absolute; left: 84%; height: 15em; top: 66%"
     />
   </fullscreen-block>
-  <fullscreen-block :color="'#fc724c'" style="display: flex" id="block2">
+  <fullscreen-block
+    :color="'#fc724c'"
+    id="block2"
+    style="
+      display: flex;
+      opacity: 1;
+      background-image: radial-gradient(#363636 1px, transparent 1px),
+        radial-gradient(#363636 1px, #fc724c 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    "
+  >
     <sparkle-pile :number="7" style="top: 150%"></sparkle-pile>
     <sparkle-pile :number="3" style="right: 0; top: 100%"></sparkle-pile>
     <div
@@ -281,15 +292,129 @@
       </div>
     </div>
   </fullscreen-block>
-  <fullscreen-block :color="'#3b71ee'" id="block4"
-    ><p class="brutalism-underlined">Фишка в css</p></fullscreen-block
-  >
+  <fullscreen-block
+    :color="'#3b71ee'"
+    id="block4"
+    style="
+      opacity: 1;
+      background-image: linear-gradient(#363636 1px, transparent 1px),
+        linear-gradient(to right, #363636 1px, #3b71ee 1px);
+      background-size: 20px 20px;
+    "
+    ><p class="brutalism-underlined">Фишка в css</p>
+  </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" id="block5"
     ><p class="brutalism-underlined">История про JavaScript</p>
-    <img
-      src="./assets/MeUni.jpg"
-      style="position: absolute; height: 100%; position: relative"
-    />
+    <sparkle-pile :number="6"></sparkle-pile>
+    <sparkle-pile :number="6" style="right: 0"></sparkle-pile>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+      "
+    >
+      <div
+        class="brutalism-style"
+        style="
+          margin: 0 auto;
+          width: fit-content;
+          border-radius: 10px;
+          border-style: ridge;
+          border-width: 7px;
+          border-color: #363636;
+          width: 45rem;
+          margin-bottom: 1rem;
+        "
+        data-aos="zoom-in"
+      >
+        На первом курсе университета я не знал толком ничего кроме основ с++, но
+        под конец года нам дали курсовую: создать сайт с использованием
+        библиотеки ThreeJS. Когда я приступил к заданию оказалось что библиотека
+        довольно простая в использовании. Надо было взять откуда то вдохновение
+        и подглядеть реализацию, в этом помогли сайты с примерами работ. Когда я
+        увидел <strong>что</strong> можно сделать с помощью этой библиотеки я
+        был поражен. <br />
+        <br />
+        Преподаватели были крайне добрые и ставили всем поголовно пятерки, но
+        тем не менее мне было интересно заниматься проектом больше нужного.
+        Сейчас он мне не кажется таким крутым как раньше :) Но мне кажется
+        увидеть примеры работ и возможности джаваскрипта и сторонних библиотек
+        нужно, чтобы понять что <strong>реализовать можно всё</strong>.
+      </div>
+      <div
+        data-aos="zoom-in"
+        style="
+          border-style: ridge;
+          border-width: 7px;
+          border
+          border-color: #363636;
+          width: 45rem;
+          border-radius: 10px;
+          overflow: hidden;
+          margin: 0 auto;
+        "
+      >
+        <img
+          src="./assets/demo.jpg"
+          style="position: absolute; height: 100%; position: relative"
+        />
+      </div>
+      <img
+        ref="myElement"
+        data-aos="zoom-out-right"
+        src="./assets/fight.webp"
+        style="
+          right: 0%;
+          height: 14em;
+          margin-top: 7vh;
+          transform: rotate(-15deg);
+          margin-right: 4vh;
+          position: absolute;
+        "
+      />
+      <div
+        class="brutalism-style"
+        style="
+          margin: 0 auto;
+          width: fit-content;
+          border-radius: 10px;
+          border-style: ridge;
+          border-width: 7px;
+          border-color: #363636;
+          width: 45rem;
+          margin-top: 1rem;
+        "
+        data-aos="zoom-in"
+      >
+        Выше - моя работа. А вот ниже будет то, что может вдохновлять по
+        настоящему. Я предлагаю посмотреть на примеры, а затем попробовать
+        реализовать что нибудь!
+      </div>
+    </div>
+  </fullscreen-block>
+  <fullscreen-block
+    class="brutalism-footer"
+    :color="'#363636'"
+    style="
+      color: white;
+      padding: 1.5vh;
+      display: flex;
+      justify-content: center;
+      font-size: 1rem;
+    "
+  >
+    <p data-aos="fade-in">
+      <strong
+        >↓ Примеры внизу!
+        <span style="font-style: italic"
+          >(надеюсь не сильно нагружают комп...)</span
+        >
+        ↓</strong
+      >
+    </p>
   </fullscreen-block>
   <iframe
     ref="iframe"
