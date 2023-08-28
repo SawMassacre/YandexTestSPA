@@ -44,7 +44,7 @@
       class="animate__animated animate__bounceIn animate__delay-1s"
       ref="myElement"
       src="./assets/git.webp"
-      style="position: absolute; left: 0%; height: 20em; top: 0%"
+      style="position: absolute; left: 0%; height: 15em; top: 0%"
     />
     <div id="container-greeting">
       <div
@@ -95,7 +95,7 @@
     <img
       class="animate__animated animate__bounceIn animate__delay-1s"
       src="./assets/memes.webp"
-      style="position: absolute; left: 84%; height: 20em; top: 66%"
+      style="position: absolute; left: 84%; height: 15em; top: 66%"
     />
   </fullscreen-block>
   <fullscreen-block :color="'#fc724c'" style="display: flex" id="block2">
@@ -162,7 +162,7 @@
         height: fit-content;
         margin-top: 9%;
         right: 19%;
-        border-radius: 20px;
+        border-radius: 15px;
         border-width: 2px;
       "
     >
@@ -178,7 +178,7 @@
         height: fit-content;
         margin-top: 18%;
         left: 16%;
-        border-radius: 20px;
+        border-radius: 15px;
         border-width: 2px;
       "
     >
@@ -371,7 +371,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100%;
+        height: 100vh;
         margin-left: 15%;
         margin-right: 15%;
       "
@@ -737,7 +737,7 @@ body {
   position: relative;
   width: fit-content;
   font-family: monospace;
-  font-size: 3em;
+  font-size: 1.7rem;
   color: black;
   background-color: white;
   padding: 1em;
@@ -793,7 +793,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
   border: 3px solid black;

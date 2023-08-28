@@ -15,7 +15,7 @@
           :style="
             direction === 'right' ? { color: '#363636' } : { color: '#ffffff' }
           "
-          style="font-size: 1.5em; padding: 1em"
+          style="font-size: 1rem; padding: 2vh"
         >
           <slot></slot>
         </p>
@@ -47,7 +47,8 @@ export default {
 }
 .neobrutalism-message {
   width: fit-content;
-  max-width: 90%;
+  max-width: 50vw;
+  height: fit-content;
   margin: 1.5vh;
   display: flex;
   flex-direction: row;
