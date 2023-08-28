@@ -332,6 +332,7 @@
           "
         >
           <div
+            data-aos="zoom-in"
             class="video-player"
             style="
               border: 0.2rem solid black;
@@ -962,7 +963,7 @@ export default {
       setTimeout(() => {
         this.LoadingScreen = false;
         window.dispatchEvent(new Event("resize"));
-      }, 1500);
+      }, 3000);
       AOS.init({
         delay: 200,
         duration: 700,
