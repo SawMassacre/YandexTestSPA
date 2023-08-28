@@ -930,9 +930,7 @@ export default {
     };
   },
   mounted() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 7000);
+    this.isLoading = false;
   },
 };
 </script>
