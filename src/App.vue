@@ -318,7 +318,36 @@
             linear-gradient(to right, #363636 1px, #3b71ee 1px);
           background-size: 20px 20px;
         "
-        ><p class="brutalism-underlined">Фишка в css</p>
+      >
+        <sparkle-pile :number="6"></sparkle-pile>
+        <sparkle-pile :number="6" style="right: 0"></sparkle-pile>
+        <p class="brutalism-underlined">Фишка в css</p>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          "
+        >
+          <div
+            class="video-player"
+            style="
+              border: 0.2rem solid black;
+              box-shadow: 10px 10px 0px 0px black;
+              z-index: 10;
+            "
+          >
+            <video
+              class="video"
+              ref="video"
+              style="height: 23rem; object-fit: fill; display: block"
+              controls
+            >
+              <source src="./assets/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </fullscreen-block>
       <fullscreen-block :color="'#fc724c'" id="block5"
         ><p class="brutalism-underlined">История про JavaScript</p>
@@ -382,13 +411,28 @@
           <img
             ref="myElement"
             data-aos="zoom-out-right"
-            src="./assets/fight.webp"
+            src="./assets/star.gif"
+            style="
+              left: 0;
+              height: 13em;
+              opacity: 0.7;
+              margin-top: 7vh;
+              transform: rotate(12deg);
+              margin-left: 4vh;
+              position: absolute;
+            "
+          />
+          <img
+            ref="myElement"
+            data-aos="zoom-out-right"
+            src="./assets/something.gif"
             style="
               right: 0%;
+              opacity: 0.7;
               height: 14em;
               margin-top: 7vh;
               transform: rotate(-15deg);
-              margin-right: 4vh;
+              margin-right: 6vh;
               position: absolute;
             "
           />
@@ -941,6 +985,12 @@ body {
   overflow-x: hidden;
   background-color: #363636;
   scrollbar-width: 100px;
+}
+
+.video {
+  height: 23rem;
+  object-fit: fill;
+  display: block;
 }
 
 .neobrutalism-button {
