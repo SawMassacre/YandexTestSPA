@@ -49,6 +49,7 @@
           ref="myElement"
           src="./assets/git.webp"
           style="position: absolute; left: 0%; height: 15em; top: 0%"
+          @load="refreshAOS"
         />
         <div id="container-greeting">
           <div
@@ -960,7 +961,6 @@ export default {
     onImgLoad() {
       setTimeout(() => {
         this.LoadingScreen = false;
-        document.body.style.zoom = "130%";
       }, 1500);
     },
     moveToBlock(blockId) {
@@ -969,6 +969,9 @@ export default {
       if (blockElement) {
         blockElement.scrollIntoView({ behavior: "smooth" });
       }
+    },
+    refreshAOS() {
+      AOS.refresh();
     },
   },
   mounted() {
