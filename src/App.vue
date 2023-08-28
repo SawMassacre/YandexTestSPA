@@ -1,7 +1,7 @@
 <template>
   <div>
-    <loading-screen v-if="isLoading"></loading-screen>
-    <div v-else>
+    <loading-screen v-show="isLoading"></loading-screen>
+    <div v-show="!isLoading">
       <fullscreen-block :color="'#3b71ee'" id="block1" style="display: block">
         <p class="brutalism-underlined">Приветственная страница</p>
         <sparkle-pile :number="6"></sparkle-pile>
@@ -22,8 +22,8 @@
         >
           <img
             src="./assets/Me.jpg"
-            style="position: absolute; height: 100%; position: relative"
             @load="onImgLoad"
+            style="position: absolute; height: 100%; position: relative"
           />
         </div>
         <div
@@ -912,9 +912,15 @@ export default {
     NeobrutalismIdea,
     LoadingScreen,
   },
+  data() {
+    return {
+      isLoading: true,
+    };
+  },
   methods: {
     onImgLoad() {
       this.isLoading = false;
+      console.log("dskakd");
     },
     moveToBlock(blockId) {
       const blockElement = document.getElementById(blockId);
@@ -923,11 +929,6 @@ export default {
         blockElement.scrollIntoView({ behavior: "smooth" });
       }
     },
-  },
-  data() {
-    return {
-      isLoading: true,
-    };
   },
 };
 </script>
