@@ -30,11 +30,11 @@
         opacity: 0.7 !important;
         top: 25%;
         left: 4%;
-        border-radius: 20px;
+        border-radius: 15px;
         border-width: 2px;
       "
     >
-      <p style="font-size: 0.3em; font-style: italic">
+      <p style="font-size: 0.7em; font-style: italic">
         Звездочки генерируются рандомно,<br />
         если они лежат некрасиво - <br />
         перезагрузите страницу (пожалуйста)
@@ -81,11 +81,11 @@
             &nbsp;крутая css фишка!
           </li>
           <li style="display: flex">
-            &bull; Парадокс на&nbsp;
+            &bull; История про&nbsp;
             <p style="color: #000000; background-color: #f7df1e; back">
               JavaScript
             </p>
-            &nbsp;и задание по теме🐐🚪🏎️
+            <p style="font-style: italic">(задание со звездочкой)</p>
           </li>
           <li>&bull; Мои контакты, ссылки на репозитории и тому подобное👾</li>
           <li>&bull; Задание 2💬</li>
@@ -106,7 +106,7 @@
       style="
         transform: rotate(-7deg);
         border: 0.15rem solid black;
-        height: 45%;
+        height: 52%;
         border-radius: 30px;
         box-shadow: 5px 5px 0px 0px black;
         overflow: hidden;
@@ -125,7 +125,7 @@
       data-aos="zoom-out-left"
       src="./assets/plenty.webp"
       style="
-        height: 30vh;
+        height: 15em;
         position: absolute;
         margin-top: 52vh;
         right: 7%;
@@ -137,7 +137,7 @@
       style="
         transform: rotate(6deg);
         border: 0.15rem solid black;
-        height: 52%;
+        height: 57%;
         border-radius: 25px;
         box-shadow: 10px 10px 0px 0px black;
         overflow: hidden;
@@ -160,13 +160,13 @@
         z-index: 10;
         position: absolute;
         height: fit-content;
-        margin-top: 9%;
-        right: 19%;
-        border-radius: 15px;
+        margin-top: 11%;
+        right: 22%;
+        border-radius: 10px;
         border-width: 2px;
       "
     >
-      <p style="font-size: 0.3em">Недавнее фото с дня рождения</p>
+      <p style="font-size: 0.8rem">Недавнее фото с дня рождения</p>
     </div>
     <div
       class="brutalism-style"
@@ -178,17 +178,17 @@
         height: fit-content;
         margin-top: 18%;
         left: 16%;
-        border-radius: 15px;
+        border-radius: 10px;
         border-width: 2px;
       "
     >
-      <p style="font-size: 0.3em">Фото в середине лета перед университетом</p>
+      <p style="font-size: 0.8rem">Фото в середине лета перед университетом</p>
     </div>
     <img
       data-aos="zoom-out-down"
       class="animate__animated animate__pulse animate__infinite"
       src="./assets/dashed.svg"
-      style="position: relative; width: 40vw; display: flex; margin: 0 auto"
+      style="position: relative; width: 35vw; display: flex; margin: 0 auto"
     />
     <p class="brutalism-underlined">Страница с фотками</p>
   </fullscreen-block>
@@ -285,8 +285,11 @@
     ><p class="brutalism-underlined">Фишка в css</p></fullscreen-block
   >
   <fullscreen-block :color="'#fc724c'" id="block5"
-    ><p class="brutalism-underlined">Парадокс на JavaScript</p>
-    <story-about-three-j-s></story-about-three-j-s>
+    ><p class="brutalism-underlined">История про JavaScript</p>
+    <img
+      src="./assets/MeUni.jpg"
+      style="position: absolute; height: 100%; position: relative"
+    />
   </fullscreen-block>
   <iframe
     ref="iframe"
@@ -308,7 +311,14 @@
     <p class="brutalism-underlined">Мои контакты</p>
 
     <div style="display: grid; place-items: center; height: 100%">
-      <div style="display: flex; flex-direction: column; align-items: center">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
         <a href="https://t.me/sawmassacre">
           <button class="neobrutalism-button" data-aos="zoom-in">
             Telegram
@@ -632,7 +642,7 @@
       <ul class="footer-list" style="padding-left: 2vw">
         <li>
           <button v-on:click="moveToBlock('block5')">
-            Парадокс на JavaScript
+            История про JavaScript
           </button>
         </li>
         <li>
@@ -696,7 +706,6 @@ import NeobrutalismMessage from "./components/NeobrutalismMessage.vue";
 import FullscreenBlock from "./components/FullscreenBlock.vue";
 import NeobrutalismIdea from "./components/NeobrutalismIdea.vue";
 import SparklePile from "./components/SparklePile.vue";
-import StoryAboutThreeJS from "./components/StoryAboutThreeJS.vue";
 import "animate.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -712,7 +721,6 @@ export default {
     FullscreenBlock,
     SparklePile,
     NeobrutalismMessage,
-    StoryAboutThreeJS,
     NeobrutalismIdea,
   },
   methods: {
@@ -784,7 +792,7 @@ body {
 #container-greeting {
   position: relative;
   top: 25%;
-  left: 50%;
+  left: 47%;
   font-size: 1.7rem;
   display: flex;
   flex-direction: column;
