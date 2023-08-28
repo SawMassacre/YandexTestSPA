@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="overflow-x: hidden">
     <loading-screen v-show="isLoading"></loading-screen>
     <div v-show="!isLoading">
       <fullscreen-block :color="'#3b71ee'" id="block1" style="display: block">
@@ -128,7 +128,7 @@
           style="
             transform: rotate(-7deg);
             border: 0.15rem solid black;
-            height: 52%;
+            height: 50%;
             border-radius: 30px;
             box-shadow: 5px 5px 0px 0px black;
             overflow: hidden;
@@ -140,7 +140,7 @@
         >
           <img
             src="./assets/MeSchool.jpg"
-            style="position: absolute; height: 100%; position</div>: relative"
+            style="position: absolute; height: 100%; position: relative"
           />
         </div>
         <img
@@ -372,7 +372,6 @@
           width: 45rem;
           border-radius: 10px;
           overflow: hidden;
-          margin: 0 auto;
         "
           >
             <img
@@ -511,6 +510,7 @@
           padding: 1.5vh;
           display: flex;
           justify-content: center;
+          overflow-x: hidden;
           font-size: 1rem;
         "
       >
@@ -919,8 +919,9 @@ export default {
   },
   methods: {
     onImgLoad() {
-      this.isLoading = false;
-      console.log("dskakd");
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1500);
     },
     moveToBlock(blockId) {
       const blockElement = document.getElementById(blockId);
@@ -939,6 +940,7 @@ body {
   color: #363636 !important;
   overflow-x: hidden;
   background-color: #363636;
+  scrollbar-width: 100px;
 }
 
 .neobrutalism-button {
