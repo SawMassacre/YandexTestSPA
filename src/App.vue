@@ -1,7 +1,7 @@
 <template>
   <div style="overflow-x: hidden">
-    <loading-screen v-show="isLoading"></loading-screen>
-    <div v-show="!isLoading">
+    <loading-screen v-show="LoadingScreen"></loading-screen>
+    <div v-show="!LoadingScreen">
       <fullscreen-block :color="'#3b71ee'" id="block1" style="display: block">
         <p class="brutalism-underlined">Приветственная страница</p>
         <sparkle-pile :number="6"></sparkle-pile>
@@ -341,7 +341,7 @@
             <video
               class="video"
               ref="video"
-              style="height: 23rem; object-fit: fill; display: block"
+              style="height: 25rem; object-fit: fill; display: block"
               controls
             >
               <source src="./assets/video.mp4" type="video/mp4" />
@@ -942,11 +942,6 @@ import "animate.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
-AOS.init({
-  delay: 200,
-  duration: 700,
-});
-
 export default {
   name: "App",
   components: {
@@ -958,13 +953,14 @@ export default {
   },
   data() {
     return {
-      isLoaded: true,
+      LoadingScreen: true,
     };
   },
   methods: {
     onImgLoad() {
       setTimeout(() => {
-        this.isLoaded = false;
+        this.LoadingScreen = false;
+        document.body.style.zoom = "130%";
       }, 1500);
     },
     moveToBlock(blockId) {
@@ -974,6 +970,12 @@ export default {
         blockElement.scrollIntoView({ behavior: "smooth" });
       }
     },
+  },
+  mounted() {
+    AOS.init({
+      delay: 200,
+      duration: 700,
+    });
   },
 };
 </script>
