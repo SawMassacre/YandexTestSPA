@@ -4,7 +4,7 @@
     <sparkle-pile :number="6"></sparkle-pile>
     <sparkle-pile :number="5" style="right: 0; top: 55%"></sparkle-pile>
     <div
-      class="animate__animated animate__bounceInLeft animate__delay-0.5s"
+      class="animate__animated animate__bounceInLeft animate__delay-2s"
       style="
         border: 0.15rem solid black;
         height: 95%;
@@ -855,8 +855,8 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 AOS.init({
-  delay: 300,
-  duration: 500,
+  delay: 200,
+  duration: 700,
 });
 
 export default {
