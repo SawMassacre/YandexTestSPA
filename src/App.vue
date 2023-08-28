@@ -961,7 +961,12 @@ export default {
     onImgLoad() {
       setTimeout(() => {
         this.LoadingScreen = false;
+        window.dispatchEvent(new Event("resize"));
       }, 1500);
+      AOS.init({
+        delay: 200,
+        duration: 700,
+      });
     },
     moveToBlock(blockId) {
       const blockElement = document.getElementById(blockId);
@@ -973,12 +978,6 @@ export default {
     refreshAOS() {
       AOS.refresh();
     },
-  },
-  mounted() {
-    AOS.init({
-      delay: 200,
-      duration: 700,
-    });
   },
 };
 </script>
