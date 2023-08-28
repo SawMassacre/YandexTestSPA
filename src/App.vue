@@ -23,6 +23,7 @@
           <img
             src="./assets/Me.jpg"
             style="position: absolute; height: 100%; position: relative"
+            @load="onImgLoad"
           />
         </div>
         <div
@@ -912,6 +913,9 @@ export default {
     LoadingScreen,
   },
   methods: {
+    onImgLoad() {
+      this.isLoading = false;
+    },
     moveToBlock(blockId) {
       const blockElement = document.getElementById(blockId);
 
