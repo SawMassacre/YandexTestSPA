@@ -1,5 +1,7 @@
 # yandextestspa
 
+## Problem with [AOS](https://michalsnik.github.io/aos/) occured, fixed by faking windows resize.
+
 ## Project setup
 ```
 npm install
@@ -19,6 +21,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
